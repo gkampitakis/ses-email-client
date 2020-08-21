@@ -20,6 +20,11 @@
     "mjml",
     "email"
   ],
+  "files": [
+    "lib/**/*",
+    "!lib/**/*.spec.js",
+    "!lib/**/__mocks__/*"
+  ],
   "dependencies": {
     "@gkampitakis/promise-util": "^1.3.1",
     "aws-sdk": "^2.738.0",
@@ -30,12 +35,12 @@
     "nodemailer": "^6.4.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.4.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.1.1",
     "semistandard": "^14.2.3",
