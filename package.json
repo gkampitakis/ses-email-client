@@ -5,11 +5,11 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "npm run lint && jest lib/**/*.js",
+    "test": "npm run lint && jest lib/src/**/*.js",
     "clean": "rimraf /coverage",
     "lint": "semistandard | snazzy",
     "lint:fix": "semistandard --fix",
-    "example": "node /example/example.js",
+    "example": "node example/example.js",
     "release": "semantic-release"
   },
   "keywords": [
@@ -42,13 +42,14 @@
     "snazzy": "^8.0.0"
   },
   "jest": {
+    "collectCoverage": true,
     "verbose": true,
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js$",
     "moduleFileExtensions": [
       "js"
     ],
     "collectCoverageFrom": [
-      "src/**/*.js",
+      "lib/src/**/*.js",
       "!src/**/*/index.js",
       "!src/index.js"
     ],
@@ -78,6 +79,9 @@
     }
   },
   "semistandard": {
+    "ignore": [
+      "**/__mocks__/**"
+    ],
     "env": [
       "jest"
     ]
