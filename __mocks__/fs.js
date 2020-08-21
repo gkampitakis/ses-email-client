@@ -1,9 +1,9 @@
 class fs {
   static ReadFileSyncSpy = jest.fn();
 
-  static readFileSync (file) {
-    fs.ReadFileSyncSpy(file);
-    return file;
+  static readFileSync (...args) {
+    fs.ReadFileSyncSpy(...args);
+    return args[0];
   }
 }
 

@@ -1,11 +1,11 @@
 function mjml2Html (data) {
-  MjmlCompileSpy(data);
+  TemplateSpy(data);
   return {
-    html: 'html'
+    html: 'htmlMJML'
   };
 }
 
-const MjmlCompileSpy = jest.fn();
+const TemplateSpy = jest.fn();
 
 module.exports = mjml2Html;
-module.exports.MjmlCompileSpy = MjmlCompileSpy;
+module.exports.TemplateSpy = TemplateSpy;

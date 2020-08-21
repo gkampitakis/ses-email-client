@@ -1,15 +1,15 @@
-class Hbs {
+class Ejs {
   static CompileSpy = jest.fn();
   static TemplateSpy = jest.fn();
 
   static compile (file) {
-    Hbs.CompileSpy(file);
+    Ejs.CompileSpy(file);
 
     return (param) => {
-      Hbs.TemplateSpy(param);
-      return 'htmlHBS';
+      Ejs.TemplateSpy(param);
+      return 'htmlEJS';
     };
   }
 }
 
-module.exports = Hbs;
+module.exports = Ejs;
