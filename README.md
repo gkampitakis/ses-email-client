@@ -63,17 +63,16 @@ await client.send({
 -   data `object` an object containing the data that the template is going to be compiled with
 -   subject `string`
 -   attachments
-    ```json
-    [
-    	{
-    		"name": "myfilte.txt", // optional if not provided take filename
-    		"path": __dirname + "/path/to/file"
-    	}
-    ] 
-    // or 
-
-    [__dirname + "/path/to/file","another/file"]
-    ```
+```js
+[
+    {
+        "name": "myfilte.txt", // optional if not provided take filename
+        "path": __dirname + "/path/to/file"
+    }
+] 
+// or 
+[__dirname + "/path/to/file","another/file"]
+```
 
 ### Changelog
 
