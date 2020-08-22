@@ -1,35 +1,61 @@
 import { PromiseResult } from 'aws-sdk/lib/request';
 import AWS from 'aws-sdk';
 
-interface SESEmailClientSettings {
+/**
+ * AWS credentials are optional as you can use aws-sdk authentication methods
+ * https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html
+ */
+export interface SESEmailClientSettings {
+  /** AWS accessKeyId */
   accessKeyId?: string;
+  /** AWS accessKeyId */
   secretAccessKey?: string;
+  /** AWS region */
   region?: string;
+  /** Templates that are supported are mjml, handlebars, ejs */
   templateLanguage?: 'mjml' | 'handlebars' | 'ejs';
 }
 
-interface File {
-  name: string;
+/**
+ * Attachment File
+ */
+export interface AttFile {
+  /** You can specify different name for the file */
+  name?: string;
+  /** Path were file is located */
   path: string;
 }
 
-interface Message {
+export interface SESMessage {
+  /** Email sender */
   from: string;
+  /** Email recipient can be one or multiple */
   to: string | string[];
+  /** Email subject */
   subject: string;
+  /** Data to be passed on template */
   data?: Record<string, any>;
+  /** Path to template */
   template?: string;
+  /** Send plain text */
   text?: string;
+  /** Sender name */
   name?: string;
-  attachments?: File[];
+  /** Array of attachments to send with email*/
+  attachments?: AttFile[];
+  /** Carbon Copy recipients */
   cc?: string | string[];
+  /** Blind Carbon Copy recipients */
   bcc?: string | string[];
   [key: string]: any;
 }
 
 export default class SESEmailClient {
   constructor (settings: SESEmailClientSettings);
-  send (message: Message): Promise<PromiseResult<AWS.SES.SendRawEmailResponse, AWS.AWSError>>;
+  /** Send method
+   * @param message Message to send
+  */
+  send (message: SESMessage): Promise<PromiseResult<AWS.SES.SendRawEmailResponse, AWS.AWSError>>;
 }
 
 
