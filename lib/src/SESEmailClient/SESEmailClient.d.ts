@@ -41,8 +41,10 @@ export interface SESMessage {
   text?: string;
   /** Sender name */
   name?: string;
-  /** Array of attachments to send with email*/
-  attachments?: AttFile[];
+  /** Array of attachments to send with email
+   * if not provided name the filename will be used
+  */
+  attachments?: (AttFile | string)[];
   /** Carbon Copy recipients */
   cc?: string | string[];
   /** Blind Carbon Copy recipients */
