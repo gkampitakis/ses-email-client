@@ -58,8 +58,9 @@ await client.send({
 -   cc `string` or `string []`
 -   bcc `string` or `string []`
 -   text `string`
+-   html `string`
 -   subject `string`
--   template `string` the filename of the html template you want to use
+-   template `string` the path of the html template you want to use
 -   data `object` an object containing the data that the template is going to be compiled with
 -   subject `string`
 -   attachments

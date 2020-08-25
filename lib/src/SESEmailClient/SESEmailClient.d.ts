@@ -41,6 +41,8 @@ export interface SESMessage {
   text?: string;
   /** Sender name */
   name?: string;
+  /** Send html, if html and template is present html takes priority */
+  html?: string;
   /** Array of attachments to send with email
    * if not provided name the filename will be used
   */
