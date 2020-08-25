@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/gkampitakis/ses-email-client/compare/v1.0.0...v1.0.1) (2020-08-25)
+
+
+### Bug Fixes
+
+* add support for sending html directly ([9dc3a06](https://github.com/gkampitakis/ses-email-client/commit/9dc3a0685928334041d2d1288b07f3d414cf366e))
+* email client constructor and template warning ([4636303](https://github.com/gkampitakis/ses-email-client/commit/4636303c3692b76c17722ba162b535e9161cf95d))
+
 # 1.0.0 (2020-08-22)
 
 
