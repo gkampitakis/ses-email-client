@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/gkampitakis/ses-email-client/compare/v1.0.1...v1.0.2) (2020-09-01)
+
+
+### Bug Fixes
+
+* passing only region didn't update AWS config ([4d14203](https://github.com/gkampitakis/ses-email-client/commit/4d1420367dbd681b00eec0c18f48324ae5de985e))
+
 ## [1.0.1](https://github.com/gkampitakis/ses-email-client/compare/v1.0.0...v1.0.1) (2020-08-25)
 
 
