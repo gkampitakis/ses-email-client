@@ -1,10 +1,10 @@
 class fs {
-  static ReadFileSyncSpy = jest.fn();
-
   static readFileSync (...args) {
     fs.ReadFileSyncSpy(...args);
     return args[0];
   }
 }
+
+fs.ReadFileSyncSpy = jest.fn();
 
 module.exports = fs;

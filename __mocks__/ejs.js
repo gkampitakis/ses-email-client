@@ -1,7 +1,4 @@
 class Ejs {
-  static CompileSpy = jest.fn();
-  static TemplateSpy = jest.fn();
-
   static compile (file) {
     Ejs.CompileSpy(file);
 
@@ -11,5 +8,8 @@ class Ejs {
     };
   }
 }
+
+Ejs.CompileSpy = jest.fn();
+Ejs.TemplateSpy = jest.fn();
 
 module.exports = Ejs;

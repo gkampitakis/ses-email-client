@@ -1,7 +1,4 @@
 class Hbs {
-  static CompileSpy = jest.fn();
-  static TemplateSpy = jest.fn();
-
   static compile (file) {
     Hbs.CompileSpy(file);
 
@@ -11,5 +8,8 @@ class Hbs {
     };
   }
 }
+
+Hbs.CompileSpy = jest.fn();
+Hbs.TemplateSpy = jest.fn();
 
 module.exports = Hbs;

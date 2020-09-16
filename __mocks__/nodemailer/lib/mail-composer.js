@@ -1,7 +1,4 @@
 class MailComposer {
-  static ConstructorSpy = jest.fn();
-  static BuildError = false;
-
   constructor(param) {
     MailComposer.ConstructorSpy(param);
   }
@@ -14,5 +11,8 @@ class MailComposer {
     };
   }
 }
+
+MailComposer.ConstructorSpy = jest.fn();
+MailComposer.BuildError = false;
 
 module.exports = MailComposer;
