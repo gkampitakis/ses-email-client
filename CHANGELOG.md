@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/gkampitakis/ses-email-client/compare/v1.0.2...v1.0.3) (2020-09-16)
+
+
+### Bug Fixes
+
+* migrate travis ci and add support for node versions 10,12,14 ([8811dcf](https://github.com/gkampitakis/ses-email-client/commit/8811dcf125a7cd832780991211e7b99dcfc8998d))
+
 ## [1.0.2](https://github.com/gkampitakis/ses-email-client/compare/v1.0.1...v1.0.2) (2020-09-01)
 
 
