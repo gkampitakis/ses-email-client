@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/gkampitakis/ses-email-client/compare/v1.0.3...v1.0.4) (2020-10-27)
+
+
+### Bug Fixes
+
+* update dependencies ([1461390](https://github.com/gkampitakis/ses-email-client/commit/146139018149b5f40235a2ffa1282804aace0493))
+
 ## [1.0.3](https://github.com/gkampitakis/ses-email-client/compare/v1.0.2...v1.0.3) (2020-09-16)
 
 
