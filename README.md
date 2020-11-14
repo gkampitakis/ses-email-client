@@ -86,3 +86,7 @@ You can also check an [example](./example) usage.
 ### Issues
 
 For any [issues](https://github.com/gkampitakis/ses-email-client/issues).
+
+## License 
+
+MIT License
