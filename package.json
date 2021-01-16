@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest lib/src/**/*.js",
+    "test": "npm run lint && jest lib/src/**/*.js",
     "clean": "rm -rf /coverage",
     "lint": "semistandard | snazzy",
     "lint:fix": "semistandard --fix",
@@ -30,6 +30,7 @@
     "ejs": "^3.1.5",
     "file-type": "^16.0.1",
     "handlebars": "^4.7.6",
+    "hashlru": "^2.3.0",
     "mjml": "^4.7.1",
     "nodemailer": "^6.4.16"
   },
