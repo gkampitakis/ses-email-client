@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/gkampitakis/ses-email-client/compare/v1.0.5...v1.1.0) (2021-01-17)
+
+
+### Features
+
+* cache templates and attachments in prod([#5](https://github.com/gkampitakis/ses-email-client/issues/5)) ([48dc2d3](https://github.com/gkampitakis/ses-email-client/commit/48dc2d3a9609956982d2fe684969ddedcf2a3a90))
+
 ## [1.0.5](https://github.com/gkampitakis/ses-email-client/compare/v1.0.4...v1.0.5) (2020-11-14)
 
 
