@@ -26,5 +26,5 @@ client.send({
     name: 'templateFile.hbs'
   }]
 })
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+  .then(console.log)
+  .catch(console.error);

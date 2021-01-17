@@ -24,17 +24,23 @@ npm i ses-email-client
 
 ### Instantiate Client
 
+**All settings are optional**
+
 ```javascript
 // or ES6 syntax import SESEmailClient from 'ses-email-client';
 const SESEmailClient = require('ses-email-client');
-
 const client = new SESEmailClient({
     accessKeyId: '**********',
     secretAccessKey: '**********',
     region: 'eu-west-2',
     templateLanguage: 'handlebars', // 'mjml', 'ejs'
+    production: true, // or process.env.NODE_ENV = production is as setting to true
+    tmpltCacheSize: 50, // template cache size default = 100
+    attCacheSize: 50 // attachment cache size default = 100
 });
 ```
+
+> Note that in production mode either by explicitly setting it to true or by setting NODE_ENV = production **ses-email-client** will cache template and attachment files.
 
 For AWS you can skip providing credentials as the `aws-sdk` is used so you can opt for other ways for authorizing.
 
@@ -67,7 +73,7 @@ await client.send({
 ```js
 [
     {
-        "name": "myfilte.txt", // optional if not provided take filename
+        "name": "myfilte.txt", // optional if not provided will keep filename
         "path": __dirname + "/path/to/file"
     }
 ] 

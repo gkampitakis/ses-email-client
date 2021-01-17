@@ -14,6 +14,12 @@ export interface SESEmailClientSettings {
   region?: string;
   /** Templates that are supported are mjml, handlebars, ejs */
   templateLanguage?: 'mjml' | 'handlebars' | 'ejs';
+  /** In case of true or NODE_ENV=production enables caching for template and attachment files */
+  production?: boolean;
+  /** cache size for template files default = 100 */
+  tmpltCacheSize?: number;
+  /** cache size for attachment files default = 100 */
+  attCacheSize?: number;
 }
 
 /**
@@ -55,7 +61,7 @@ export interface SESMessage {
 }
 
 export default class SESEmailClient {
-  constructor (settings: SESEmailClientSettings);
+  constructor (settings?: SESEmailClientSettings);
   /** Send method
    * @param message Message to send
   */
