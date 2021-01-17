@@ -1,7 +1,7 @@
 const HLRUConstructorSpy = jest.fn();
 const getSpy = jest.fn();
 const setSpy = jest.fn();
-const mockCache = {};
+let mockCache = {};
 
 function HLRU (cacheSize) {
   HLRUConstructorSpy(cacheSize);
@@ -21,4 +21,4 @@ module.exports = HLRU;
 module.exports.getSpy = getSpy;
 module.exports.setSpy = setSpy;
 module.exports.HLRUConstructorSpy = HLRUConstructorSpy;
-module.exports.mockCache = HLRUConstructorSpy; 
+module.exports.clearCache = () => { mockCache = {} }; 

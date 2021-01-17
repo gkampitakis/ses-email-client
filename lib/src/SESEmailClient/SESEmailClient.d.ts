@@ -61,7 +61,7 @@ export interface SESMessage {
 }
 
 export default class SESEmailClient {
-  constructor (settings: SESEmailClientSettings);
+  constructor (settings?: SESEmailClientSettings);
   /** Send method
    * @param message Message to send
   */
