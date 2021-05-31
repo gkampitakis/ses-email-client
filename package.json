@@ -9,8 +9,7 @@
     "clean": "rm -rf /coverage",
     "lint": "semistandard | snazzy",
     "lint:fix": "semistandard --fix",
-    "example": "node example/example.js",
-    "release": "semantic-release"
+    "example": "node example/example.js"
   },
   "keywords": [
     "AWS-SES",
@@ -26,19 +25,16 @@
     "!lib/**/__mocks__/*"
   ],
   "dependencies": {
-    "aws-sdk": "^2.792.0",
-    "ejs": "^3.1.5",
-    "file-type": "^16.0.1",
-    "handlebars": "^4.7.6",
+    "aws-sdk": "^2.918.0",
+    "ejs": "^3.1.6",
+    "file-type": "^16.5.0",
+    "handlebars": "^4.7.7",
     "hashlru": "^2.3.0",
-    "mjml": "^4.7.1",
-    "nodemailer": "^6.4.16"
+    "mjml": "^4.9.3",
+    "nodemailer": "^6.6.1"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "jest": "^26.6.3",
-    "semantic-release": "^17.2.2",
+    "jest": "^27.0.3",
     "semistandard": "^16.0.0",
     "snazzy": "^9.0.0"
   },

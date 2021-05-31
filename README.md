@@ -1,8 +1,6 @@
 # SES Email Client
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
-[![Build Status](https://travis-ci.com/gkampitakis/ses-email-client.svg?branch=master)](https://travis-ci.com/gkampitakis/ses-email-client)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Description
 
@@ -36,7 +34,7 @@ const client = new SESEmailClient({
     templateLanguage: 'handlebars', // 'mjml', 'ejs'
     production: true, // or process.env.NODE_ENV = production is as setting to true
     tmpltCacheSize: 50, // template cache size default = 100
-    attCacheSize: 50 // attachment cache size default = 100
+    attCacheSize: 50, // attachment cache size default = 100
 });
 ```
 
@@ -70,20 +68,18 @@ await client.send({
 -   data `object` an object containing the data that the template is going to be compiled with
 -   subject `string`
 -   attachments
+
 ```js
 [
     {
-        "name": "myfilte.txt", // optional if not provided will keep filename
-        "path": __dirname + "/path/to/file"
-    }
-] 
-// or 
-[__dirname + "/path/to/file","another/file"]
+        name: 'myfilte.txt', // optional if not provided will keep filename
+        path: __dirname + '/path/to/file',
+    },
+][
+    // or
+    (__dirname + '/path/to/file', 'another/file')
+];
 ```
-
-### Changelog
-
-[CHANGELOG.md](./CHANGELOG.md)
 
 ### Example
 
@@ -93,6 +89,6 @@ You can also check an [example](./example) usage.
 
 For any [issues](https://github.com/gkampitakis/ses-email-client/issues).
 
-## License 
+## License
 
 MIT License
