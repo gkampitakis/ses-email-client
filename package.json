@@ -34,7 +34,7 @@
     "nodemailer": "^6.6.1"
   },
   "devDependencies": {
-    "jest": "^27.0.3",
+    "jest": "^28.0.3",
     "semistandard": "^16.0.0",
     "snazzy": "^9.0.0"
   },
